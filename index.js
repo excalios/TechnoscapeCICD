@@ -3,7 +3,7 @@ const app = express();
 const Products = require('./product.json');
 
 app.get('/', (req, res) => {
-	res.send('simple rest app');
+	res.send('simple rest app for technoscape');
 });
 
 app.get('/product/listall', (req, res) => {
