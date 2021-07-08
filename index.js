@@ -1,6 +1,15 @@
 const express = require('express');
 const app = express();
 const Products = require('./product.json');
+const SmeeClient = require('smee-client');
+
+const smee = new SmeeClient({
+	source: 'https://smee.io/Zt9KemxgQOpNqbkP',
+	target: 'http://localhost:8080/github-webhook',
+	logger: console,
+});
+
+const events = smee.start();
 
 app.get('/', (req, res) => {
     if ('test') {
